@@ -1,0 +1,167 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ff6600;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* Section Styling */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Heading Styles */
+h1, h2 {
+    font-size: 36px;
+    color: #4b44d7;
+}
+
+.neon-text {
+    text-shadow: 0 0 10px #04e9ece9, 0 0 20px #ffcc00;
+}
+
+/* Paragraph Styling - Bold */
+p {
+    font-size: 18px;
+    color: #444;
+    font-weight: bold;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect: Background color changes when the cursor moves over the paragraph */
+p:hover {
+    background-color: lightblue; /* Light blue background */
+    color: #4c3131; /* Darker text for contrast */
+    border-radius: 5px;
+}
+
+/* Styling the UL */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* Styling the LI */
+ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Styling the MENU Link */
+ul li a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff5733, #ffcc33);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+ul li a:hover {
+    background: linear-gradient(45deg, #ffcc33, #ff5733);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Footer */
+.footer {
+    background-color: #0521bf;
+    color: rgb(250, 34, 34);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.glow-text{
+    font-size:50px;
+    color:rgb(222, 225, 241);
+    text-align:center;
+    text-shadow:0 0 10px rgb(59, 76, 229), 0 0 20px orange, 0 0 30px yellow ;
+}
+body{
+        background-image:url("backg.jpeg");
+        background-attachment:fixed;
+        background-size:cover;
+        color:black; 
+        font-family:Arial,sans-serif;
+    }
+    .content{
+        height: 1500px;
+        padding: 50px;
+                    }
+                    button {
+    font-size: 25px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff8c00, #ff4500); /* Gradient Orange */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Hover effect */
+button:hover {
+    background: linear-gradient(45deg, #ff4500, #ff8c00); /* Reverse Gradient */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 6px 15px rgba(255, 69, 0, 0.6);
+}
+
+/* Active effect (when clicked) */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 8px rgba(255, 69, 0, 0.4);
+}/* Hover effect for paragraphs */
+ol:hover {
+    background-color: rgb(117, 213, 235); /* Change background color on hover */
+    color: black; /* Adjust text color for better readability */
+    padding: 5px; /* Adds some space inside the text background */
+    border-radius: 5px; /* Makes background edges rounded */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */}
+    /* Ordered list items */
+ol li {
+    font-size: 20px; 
+}
