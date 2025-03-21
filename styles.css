@@ -45,7 +45,7 @@ h1, h2 {
 /* Paragraph Styling - Bold */
 p {
     font-size: 18px;
-    color: #444;
+    color:grey;
     font-weight: bold;
     line-height: 1.6;
     max-width: 800px;
@@ -164,4 +164,9 @@ ol:hover {
     /* Ordered list items */
 ol li {
     font-size: 20px; 
+}
+.navbar:hover {
+    background: linear-gradient(45deg, #ec2d2d, #ff8c00); /* Reverse Gradient */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 6px 15px rgb(209, 69, 18);
 }
