@@ -98,6 +98,54 @@ document.getElementById("orderForm").addEventListener("submit", function (e) {
         <p>You have ordered:</p>
         <ul>${itemList.join("")}</ul>
         <h3>Total Bill: ₹${totalBill}</h3>
-        <p>🙏 We appreciate your order. Enjoy your meal!</p>
+        <button id="payNowBtn">💳 Proceed to Payment</button>
     `;
+
+    document.getElementById("payNowBtn").addEventListener("click", function () {
+        showPaymentOptions(totalBill);
+    });
 });
+
+function showPaymentOptions(totalBill) {
+    document.getElementById("orderSummary").innerHTML += `
+        <div id="paymentOptions" style="margin-top:20px;">
+            <h3>Select Payment Method:</h3>
+            <select id="paymentMethod" required>
+                <option value="">-- Choose Payment Method --</option>
+                <option value="gpay">🤑 Google Pay</option>
+                <option value="netbanking">🏦 Netbanking</option>
+                <option value="upi">📱 UPI</option>
+                <option value="card">💳 Credit/Debit Card</option>
+            </select>
+            <br><br>
+            <button id="finalPayBtn">✅ Pay ₹${totalBill}</button>
+        </div>
+    `;
+
+    document.getElementById("finalPayBtn").addEventListener("click", function () {
+        const method = document.getElementById("paymentMethod").value;
+        if (!method) {
+            alert("⚠️ Please select a payment method!");
+            return;
+        }
+
+        document.getElementById("paymentOptions").innerHTML = `
+            <h3>Processing your payment...</h3>
+            <progress value="0" max="100" id="paymentProgress" style="width: 100%;"></progress>
+        `;
+
+        let progress = 0;
+        const interval = setInterval(() => {
+            progress += 10;
+            document.getElementById("paymentProgress").value = progress;
+            if (progress >= 100) {
+                clearInterval(interval);
+                document.getElementById("orderSummary").innerHTML = `
+                    <h2>🎉 Payment Successful!</h2>
+                    <p>Thank you for your payment via ${method.toUpperCase()}.</p>
+                    <p>🙏 Your order is now confirmed!</p>
+                `;
+            }
+        }, 300);
+    });
+}
