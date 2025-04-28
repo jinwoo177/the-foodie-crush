@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Your Order</title>
     <link rel="stylesheet" href="order.css">
 </head>
 <body>
 
-    <h1 class="glow-text">🛒 Place Your Order</h1>
-    <div class="order-section">
-        <form id="orderForm">
-            <!-- Customer Name -->
-            <label for="customerName">Name:</label><br>
-            <input type="text" id="customerName" name="customerName" required><br><br>
+    <div class="container">
+        <h1 class="glow-text">🛒 Place Your Order</h1>
+        <div class="order-section">
+            <form id="orderForm">
+                <!-- Customer Name -->
+                <label for="customerName">Name:</label>
+                <input type="text" id="customerName" name="customerName" placeholder="Enter your name" required><br><br>
 
-            <!-- Customer Contact -->
-            <label for="customerContact">Contact Number:</label><br>
-            <input type="tel" id="customerContact" name="customerContact" pattern="[0-9]{10}" maxlength="10" required><br><br>
+                <!-- Customer Contact -->
+                <label for="customerContact">Contact Number:</label>
+                <input type="tel" id="customerContact" name="customerContact" pattern="[0-9]{10}" maxlength="10" placeholder="Enter your contact" required><br><br>
 
-            <!-- Items Container -->
-            <div id="itemsContainer">
-                <!-- Items will be added here dynamically -->
-            </div>
+                <!-- Items Container -->
+                <div id="itemsContainer">
+                    <!-- Items will be added here dynamically -->
+                </div>
 
-            <button type="button" onclick="addItem()">➕ Add Another Item</button><br><br>
-            <button type="submit">🧾 Submit Order</button>
-        </form>
+                <button type="button" class="add-item-btn" onclick="addItem()">➕ Add Another Item</button><br><br>
+                <button type="submit" class="submit-btn">🧾 Submit Order</button>
+            </form>
 
-        <!-- Order Summary Display -->
-        <div id="orderSummary"></div>
+            <!-- Order Summary Display -->
+            <div id="orderSummary"></div>
+        </div>
     </div>
 
     <script src="order.js"></script>
